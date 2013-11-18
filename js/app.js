@@ -5,6 +5,8 @@
 
 $(document).ready(function(){
 	var messageHolder = $("#message");
+	// Skru av caching
+	$.ajaxSetup({ cache: false });
 
 	// Sjekk etter nye meldinger hvert halve sekund
 	window.setInterval(function(){

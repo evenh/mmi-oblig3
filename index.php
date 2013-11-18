@@ -14,6 +14,12 @@
 	<div class="container">
 	<h1>Applikasjonstittel</h1>
 	<p id="message">Laster inn applikasjonen...</p>
+	<ol>
+		<li>Historikk 1</li>
+		<li>Historikk 2</li>
+		<li>Historikk 3</li>
+	</ol>
+	<p><strong>Notes:</strong> Kanskje fade historikk på en pen måte</p>
 </div>
 </body>
 </html>
