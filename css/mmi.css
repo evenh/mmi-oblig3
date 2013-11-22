@@ -1,0 +1,9 @@
+#message {
+	border: 1px solid black;
+	padding: 0.5em;
+	font-size: 2em;
+}
+
+#historikk {
+	list-style: none;
+}

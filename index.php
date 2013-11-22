@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="css/mmi.css" media="screen">
 	<!-- JS -->
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/app.js"></script>
@@ -14,12 +15,9 @@
 	<div class="container">
 	<h1>Applikasjonstittel</h1>
 	<p id="message">Laster inn applikasjonen...</p>
-	<ol>
-		<li>Historikk 1</li>
-		<li>Historikk 2</li>
-		<li>Historikk 3</li>
+	<h2>Historikk</h2>
+	<ol id="historikk">
 	</ol>
-	<p><strong>Notes:</strong> Kanskje fade historikk på en pen måte</p>
 </div>
 </body>
 </html>
