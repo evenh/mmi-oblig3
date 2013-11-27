@@ -1,0 +1,37 @@
+nav a {
+	display: block;
+	padding: 1rem 1.5rem;
+	background-color: #ccc;
+	width: 50%;
+	margin: 0.75rem auto;
+	border-bottom: 3px solid #999;
+	border-top: 0;
+	border-radius: 0.5rem;
+	text-align: center;
+	text-decoration: none;
+	color: #444;
+}
+
+nav a:active {
+	border-top: 3px solid #ddd;
+	border-bottom: 0;
+	background-color: #ddd;
+}
+
+#personList {
+	list-style: none;
+	padding: 0;
+}
+
+#personList li {
+	width: 52.5%;
+	margin: 0 auto;
+}
+
+.unavailable {
+	color: red;
+}
+
+.available {
+	color: green;
+}

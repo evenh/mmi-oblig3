@@ -6,6 +6,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic" />
 	<link rel="stylesheet" type="text/css" href="css/mmi.css" />
+	<link rel="stylesheet" type="text/css" href="css/tmp.css" />
+
 
 	<title>Applikasjonstittel 1.0</title>
 </head>
@@ -20,17 +22,17 @@
 		<section>
 			<nav>
 				<a href="#">Start ny samtale</a>
-				<a href="#">Delta i samtale</a>
+				<a href="#">Delta i samtale </a>
 			</nav>
-			<p id="message">Laster inn applikasjonen...</p>
-
 		</section>
 		
+		<ul id="personList">
+		</ul>
 	</div>
 
-<!-- Javascript -->
+	<!-- Javascript -->
 
-<script src="js/jquery-1.10.2.min.js"></script>
-
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/persons.js"></script>
 </body>
 </html>
