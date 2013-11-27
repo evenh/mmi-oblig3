@@ -3,48 +3,127 @@
 **		av ACME MMI
 */
 
-html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, img {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+@media only screen and (orientation: landscape) {
+
+	html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, img {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline;
+	}
+
+	aside, section, article, header, footer, menu, figure, nav {
+		display: block;
+	}
+
+	html, body {
+		height: 100%;
+		width: 100%;
+	}
+
+	html {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+
+	body {
+		font-family: "Roboto", sans-serif;
+		background-color: #f0f0f0;
+		color: rgba(10, 10, 10, 0.8);
+	}
+
+
+	/*	Applikasjonscontainer
+	*/
+
+	#application {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+
+	#application section {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: block;
+	}
+
+	/*	Applikasjonstittel
+	*/
+
+	header {
+		background-color: rgba(10, 10, 10, 0.8);
+		padding: 0.35rem 0;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+		header h1 {
+			color: #ffffff;
+			font-size: 1rem;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 1;
+			margin: 0;
+			padding: 0;
+		}
+
+
+	/*	Meldinger
+	*/
+
+	#message {
+		height: 20vh;
+		padding: 0.5rem;
+		font-size: 2rem;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	#historikk {
+		width: 100%;
+		display: block;
+		list-style: none;
+	}
+
+	#historikk li {
+		min-height: 10vh;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	#historikk li:nth-child(3) {
+		font-size: 1.5rem;
+	}
+
+	#historikk li:nth-child(2) {
+		font-size: 1.25rem;
+	}
+
+	#historikk li:nth-child(1) {
+		font-size: 1rem;
+	}
+
 }
 
-aside, section, article, header, footer, menu, figure, nav {
-	display: block;
+
+/*	Animasjoner
+*/
+
+@keyframes new-message {
+	from 	{ background-color: rgba(155, 255, 135, 1); }
+	to 		{ background-color: rgba(155, 255, 135, 0); }
 }
 
-html, body {
-	height: 100%;
-	width: 100%;
+@-webkit-keyframes new-message {
+	from 	{ background-color: rgba(155, 255, 135, 1); }
+	to 		{ background-color: rgba(155, 255, 135, 0); }
 }
 
-html {
-	font-size: 18px;
-	line-height: 1.5;
-}
-
-body {
-	font-family: "Roboto", sans-serif;
-	background-color: #fff;
-	color: rgba(10, 10, 10, 0.8);
-}
-
-
-#message {
-	border: 1px solid black;
-	padding: 0.5em;
-	font-size: 2em;
-}
-
-#historikk {
-	list-style: none;
-}
-
-#historikk li:first-child {
-	font-size: 1.4em;
-}
-
-#historikk li:nth-child(2) {
-	font-size: 1.3em;
+.new-message {
+	animation: new-message 1s;
+	-webkit-animation: new-message 1s;
 }

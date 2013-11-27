@@ -11,19 +11,21 @@
 </head>
 <body>
 
-	<div class="container">
+	<div id="application" class="container">
 
 		<header>
 			<h1>Applikasjonstittel</h1>
 		</header>
 
 		<section>
-			<p id="message">Laster inn applikasjonen...</p>
-			<h2>Historikk</h2>
 
 			<ol id="historikk">
 			</ol>
+
+			<p id="message">Laster inn applikasjonen...</p>
+
 		</section>
+		
 	</div>
 
 <!-- Javascript -->

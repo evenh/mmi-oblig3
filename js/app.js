@@ -4,8 +4,13 @@
  */
 
 $(document).ready(function(){
+
+	$("#application").append('<audio id="blip" nocontrols><source src="audio/blip.mp3" type="audio/mpeg" /><source src="audio/blip.ogg" type="audio/ogg" /></audio>');
+
+	var audioHolder		= document.getElementById("blip");
 	var messageHolder   = $("#message");
 	var historikkHolder = $("#historikk");
+	var firstLoad		= true;
 	// Skru av caching
 	$.ajaxSetup({ cache: false });
 
@@ -20,8 +25,27 @@ $(document).ready(function(){
 				// Rens historikk, og loop gjennom resterende array
 				historikkHolder.html('');
 				for (var i=1;i<data.messages.length; i++){
-					historikkHolder.append('<li>'+data.messages[i]+'</li>');
+					historikkHolder.prepend('<li>'+data.messages[i]+'</li>');
 				}
+
+				if (!firstLoad) { 
+					$(messageHolder).css({
+						"animation": "new-message 2s",
+						"-webkit-animation": "new-message 2s"
+					});
+
+					setTimeout(function() {
+						$(messageHolder).css({
+							"animation": "none",
+							"-webkit-animation": "none"
+						})
+					}, 2000);
+
+					audioHolder.play();
+				}
+
+				firstLoad = false;
+
 			}
 		});
 	}, 500);
