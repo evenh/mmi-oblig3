@@ -1,7 +1,19 @@
 $(document).ready(function(){
 	var personer;
-
 	var personHolder = $("#personList");
+
+	// Hvis delta-knappen er trykket på
+	$("#delta").click(function(e){
+		e.preventDefault();
+		personHolder.toggle();
+	});
+
+	// Hvis brukeren prøver å trykke på en tilgjengelig bruker
+	// HVORFOR FUNKER IKKE DETTE?!?!?
+	$("[id^='confirm-conversation']").click(function(e){
+		e.preventDefault();
+		console.log("Foo");
+	});
 
 	// Skru av caching
 	$.ajaxSetup({ cache: false });
@@ -20,7 +32,7 @@ $(document).ready(function(){
 
 				// Loop gjennom tilgjengelige kontakter
 				for(var i=0;i<data.available.length;i++){
-					personHolder.append('<li class="available">'+data.available[i]+'</li>');
+					personHolder.append('<li class="available"><a id="confirm-conversation-'+i+'" data-name="'+data.available[i]+'" href="#">'+data.available[i]+'</a></li>');
 				}
 
 				// Loop gjennom utilgjengelige kontakter
@@ -30,5 +42,4 @@ $(document).ready(function(){
 			}
 		});
 	}, 500);
-	
 });
