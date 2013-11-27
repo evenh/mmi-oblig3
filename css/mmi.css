@@ -5,6 +5,12 @@
 
 @media only screen and (orientation: landscape) {
 
+	* {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
+	}
+
 	html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, img {
 		margin: 0;
 		padding: 0;
@@ -28,7 +34,7 @@
 
 	body {
 		font-family: "Roboto", sans-serif;
-		background-color: #f0f0f0;
+		background-color: #fff;
 		color: rgba(10, 10, 10, 0.8);
 	}
 
@@ -37,14 +43,10 @@
 	*/
 
 	#application {
-		position: relative;
-		height: 100%;
-		width: 100%;
+
 	}
 
 	#application section {
-		position: absolute;
-		bottom: 0;
 		width: 100%;
 		display: block;
 	}
@@ -53,8 +55,8 @@
 	*/
 
 	header {
+		height: 10vh;
 		background-color: rgba(10, 10, 10, 0.8);
-		padding: 0.35rem 0;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
@@ -74,12 +76,14 @@
 	*/
 
 	#message {
-		height: 20vh;
-		padding: 0.5rem;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		display: block;
 		width: 100%;
 		text-align: center;
+		min-height: 22.5vh;
+		line-height: 22.5vh;
+		box-sizing: border-box;
+		z-index: 4;
 	}
 
 	#historikk {
@@ -89,22 +93,31 @@
 	}
 
 	#historikk li {
-		min-height: 10vh;
 		display: block;
 		width: 100%;
 		text-align: center;
+		min-height: 22.5vh;
+		line-height: 22.5vh;
+		box-sizing: border-box;
+
 	}
 
 	#historikk li:nth-child(3) {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
+		background-color: rgba(0, 0, 0, 0.05);
+		z-index: 3;
 	}
 
 	#historikk li:nth-child(2) {
-		font-size: 1.25rem;
+		font-size: 1.1rem;
+		background-color: rgba(0, 0, 0, 0.1);
+		z-index: 2;
 	}
 
 	#historikk li:nth-child(1) {
-		font-size: 1rem;
+		font-size: 0.9rem;
+		background-color: rgba(0, 0, 0, 0.15);
+		z-index: 1;
 	}
 
 }
