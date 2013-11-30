@@ -32,7 +32,7 @@
 
 	<!-- Javascript -->
 
-	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<script src="js/persons.js"></script>
 </body>
 </html>
