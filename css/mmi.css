@@ -57,18 +57,44 @@
 	header {
 		height: 10vh;
 		background-color: rgba(10, 10, 10, 0.8);
+		padding: 0 0.5rem;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+
+		header .title-holder {
+			width: 80%;
+			display: inline-block;
+		}
+
+		header .left-button-holder,
+		header .right-button-holder {
+			width: 10%;
+			display: inline-block;
+		}
 
 		header h1 {
 			color: #ffffff;
 			font-size: 1rem;
 			text-transform: uppercase;
 			text-align: center;
-			line-height: 1;
+			line-height: 10vh;
 			margin: 0;
 			padding: 0;
+
+		}
+
+		header a {
+			display: inline-block;
+			height: 8vh;
+			box-sizing: border-box;
+			margin-top: 1vh;
+			vertical-align: top;
+			text-decoration: none;
+			text-align: center;
+			line-height: 8vh;
+			background-color: #0068c0;
+			color: #ffffff;
 		}
 
 
@@ -80,8 +106,8 @@
 		display: block;
 		width: 100%;
 		text-align: center;
-		min-height: 22.5vh;
-		line-height: 22.5vh;
+		min-height: 30vh;
+		line-height: 30vh;
 		box-sizing: border-box;
 		z-index: 4;
 	}
@@ -96,26 +122,29 @@
 		display: block;
 		width: 100%;
 		text-align: center;
-		min-height: 22.5vh;
-		line-height: 22.5vh;
+		min-height: 20vh;
+		line-height: 20vh;
 		box-sizing: border-box;
 
 	}
 
 	#historikk li:nth-child(3) {
 		font-size: 1.3rem;
+		color: rgba(0, 0, 0, 0.7);
 		background-color: rgba(0, 0, 0, 0.05);
 		z-index: 3;
 	}
 
 	#historikk li:nth-child(2) {
 		font-size: 1.1rem;
+		color: rgba(0, 0, 0, 0.6);
 		background-color: rgba(0, 0, 0, 0.1);
 		z-index: 2;
 	}
 
 	#historikk li:nth-child(1) {
 		font-size: 0.9rem;
+		color: rgba(0, 0, 0, 0.5);
 		background-color: rgba(0, 0, 0, 0.15);
 		z-index: 1;
 	}
@@ -134,9 +163,4 @@
 @-webkit-keyframes new-message {
 	from 	{ background-color: rgba(155, 255, 135, 1); }
 	to 		{ background-color: rgba(155, 255, 135, 0); }
-}
-
-.new-message {
-	animation: new-message 1s;
-	-webkit-animation: new-message 1s;
 }
