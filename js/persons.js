@@ -10,10 +10,20 @@ $(document).ready(function(){
 
 	// Hvis brukeren prøver å trykke på en tilgjengelig bruker
 	// HVORFOR FUNKER IKKE DETTE?!?!?
-	$("[id^='confirm-conversation']").click(function(e){
-		e.preventDefault();
-		console.log("Foo");
+	//	$("[id^='confirm-conversation']").click(function(e){
+	//		e.preventDefault();
+	//		console.log("Foo");
+	//	});
+
+	// Denne funker.
+
+	$("#application").on("click", "[id*=confirm-conversation]", function(evt) {
+		evt.stopPropagation();
+		evt.preventDefault();
+		console.log("wat");
 	});
+
+
 
 	// Skru av caching
 	$.ajaxSetup({ cache: false });
