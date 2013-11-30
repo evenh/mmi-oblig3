@@ -11,11 +11,26 @@
 </head>
 <body>
 
+	<?php
+		if (isset($_GET["name"])) {
+			$title = "Samtale med " . $_GET["name"];
+		}
+
+		else {
+			$title = "Åpen samtale";
+		}
+	?>
+
 	<div id="application" class="container">
 
 	
 		<header>
-			<h1>Applikasjonstittel</h1>
+				<a href="#" class="left-button-holder">Rensk</a>
+				<h1 class="title-holder"><?php echo $title; ?></h1>
+
+			<span class="right-button-holder">
+				
+			</span>
 		</header>
 	
 
