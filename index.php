@@ -20,7 +20,7 @@
 
 		<section>
 			<nav>
-				<a id="start" href="#">Start ny samtale</a>
+				<a id="start" href="samtale.php">Start ny samtale</a>
 			</nav>
 		</section>
 		
