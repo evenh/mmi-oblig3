@@ -116,9 +116,9 @@
 	}
 
 		nav a:active {
-			border-top: 3px solid #60d600;
+			border-top: 3px solid #3c8700;
 			border-bottom: 0;
-			background-color: #60d600;
+			background-color: #3c8700;
 		}
 
 
@@ -192,6 +192,7 @@
 	}
 
 	#personList a, #personList p {
+		vertical-align: text-bottom;
 		display: block;
 		padding: 1rem;
 	}
@@ -203,7 +204,7 @@
 	.unavailable p:before {
 		content: "•";
 		color: #aaa;
-		font-size: 200%;
+		font-size: 220%;
 		margin-right: 1rem;
 		height: 0;
 		line-height: 0;
@@ -218,7 +219,7 @@
 	.available a:before {
 		content: "•";
 		color: #228822;
-		font-size: 200%;
+		font-size: 220%;
 		margin-right: 1rem;
 		height: 0;
 		line-height: 0;
