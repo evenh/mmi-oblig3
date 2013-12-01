@@ -5,6 +5,8 @@
 
 $(document).ready(function(){
 
+	window.scrollTo(0,1);
+
 	$("#application").append('<audio id="blip" nocontrols><source src="audio/blip.mp3" type="audio/mpeg" /><source src="audio/blip.ogg" type="audio/ogg" /></audio>');
 
 	var audioHolder		= document.getElementById("blip");
