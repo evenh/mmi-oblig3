@@ -21,7 +21,6 @@
 		<section>
 			<nav>
 				<a id="start" href="#">Start ny samtale</a>
-				<a id="delta" href="#">Delta i samtale </a>
 			</nav>
 		</section>
 		

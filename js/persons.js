@@ -2,12 +2,6 @@ $(document).ready(function(){
 	var personer;
 	var personHolder = $("#personList");
 
-	// Hvis delta-knappen er trykket på
-	$("#delta").click(function(e){
-		e.preventDefault();
-		personHolder.toggle();
-	});
-
 	$("#application").on("click", "[id*=confirm-conversation]", function(evt) {
 		evt.stopPropagation();
 		evt.preventDefault();
