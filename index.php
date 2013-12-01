@@ -6,49 +6,33 @@
 	
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic" />
 	<link rel="stylesheet" type="text/css" href="css/mmi.css" />
+	<link rel="stylesheet" type="text/css" href="css/tmp.css" />
+
 
 	<title>Applikasjonstittel 1.0</title>
 </head>
 <body>
 
-	<?php
-		if (isset($_GET["name"])) {
-			$title = "Samtale med " . $_GET["name"];
-		}
-
-		else {
-			$title = "Åpen samtale";
-		}
-	?>
-
 	<div id="application" class="container">
 
-	
 		<header>
-				<a href="#" class="left-button-holder">Rensk</a>
-				<h1 class="title-holder"><?php echo $title; ?></h1>
-
-			<span class="right-button-holder">
-				
-			</span>
+			<h1>Applikasjonstittel</h1>
 		</header>
-	
 
 		<section>
-
-			<ol id="historikk">
-			</ol>
-
-			<p id="message">Laster inn applikasjonen...</p>
-
+			<nav>
+				<a id="start" href="#">Start ny samtale</a>
+				<a id="delta" href="#">Delta i samtale </a>
+			</nav>
 		</section>
-
+		
+		<ul id="personList">
+		</ul>
 	</div>
 
-<!-- Javascript -->
+	<!-- Javascript -->
 
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/app.js"></script>
-
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="js/persons.js"></script>
 </body>
 </html>

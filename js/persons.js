@@ -13,7 +13,7 @@ $(document).ready(function(){
 		evt.preventDefault();
 		var name = $(this).data("name");
 		if(confirm("Er du sikker på at du vil starte en samtale med "+name+"?")){
-			location.href = "index.php?name="+encodeURIComponent(name);
+			location.href = "samtale.php?name="+encodeURIComponent(name);
 		}
 	});
 

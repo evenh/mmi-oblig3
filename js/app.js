@@ -1,4 +1,4 @@
-/* 2013 (c) Even Hotlhe <even.holthe@me.com>
+/* 2013 (c) Even Holthe <even.holthe@me.com>
  *
  * Til bruk i oblig3 i Menneske maskin interaksjon-faget, høsten 2013
  */
