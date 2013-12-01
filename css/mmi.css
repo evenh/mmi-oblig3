@@ -184,14 +184,45 @@
 	#personList li {
 		width: 52.5%;
 		margin: 0 auto;
+		border-bottom: 1px solid #ccc;
+	}
+
+	#personList li:last-child {
+		border-bottom: 0;
+	}
+
+	#personList a, #personList p {
+		display: block;
+		padding: 1rem;
 	}
 
 	.unavailable {
-		color: red;
+		color: #999;
 	}
 
-	.available {
-		color: green;
+	.unavailable p:before {
+		content: "•";
+		color: #aaa;
+		font-size: 200%;
+		margin-right: 1rem;
+		height: 0;
+		line-height: 0;
+		vertical-align: middle;
+	}
+
+	.available, .available a {
+		color: #228822;
+		text-decoration: none;
+	}
+
+	.available a:before {
+		content: "•";
+		color: #228822;
+		font-size: 200%;
+		margin-right: 1rem;
+		height: 0;
+		line-height: 0;
+		vertical-align: middle;
 	}
 
 }

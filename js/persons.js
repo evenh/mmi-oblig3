@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 				// Loop gjennom utilgjengelige kontakter
 				for(var i=0;i<data.unavailable.length;i++){
-					personHolder.append('<li class="unavailable">'+data.unavailable[i]+'</li>');
+					personHolder.append('<li class="unavailable"><p>'+data.unavailable[i]+'</p></li>');
 				}
 			}
 		});
