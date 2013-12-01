@@ -45,19 +45,28 @@
 
 	#application {
 		min-height: 100%;
-		display: block;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
 	}
 
 	#application section {
 		width: 100%;
-		display: block;
+		flex: 1 0 auto;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
 	}
 
 	/*	Applikasjonstittel
 	*/
 
 	header {
-		height: 10vh;
+		flex: 0 0 auto;
+		width: 100%;
+		height: 40px;
 		background-color: rgba(10, 10, 10, 0.8);
 		padding: 0 0.5rem;
 		-moz-box-sizing: border-box;
@@ -83,13 +92,13 @@
 		header a {
 			width: 10%;
 			display: inline-block;
-			height: 8vh;
+			max-height: 100%;
 			box-sizing: border-box;
 			margin-top: 1vh;
 			vertical-align: top;
 			text-decoration: none;
 			text-align: center;
-			line-height: 8vh;
+			padding: 0.5rem;
 			background-color: #0068c0;
 			color: #ffffff;
 		}
@@ -97,6 +106,10 @@
 
 	/*	Navigasjon
 	*/
+
+	nav {
+		margin-top: 1.5rem;
+	}
 
 	nav a {
 		display: block;
@@ -121,6 +134,25 @@
 			background-color: #3c8700;
 		}
 
+		nav a.alt {
+			background-color: #0065ba;
+			border-top: 0;
+			border-bottom: 3px solid #004987;
+		}
+
+			nav a.alt:active {
+				background-color: #004987;
+				border-bottom: 0;
+				border-top: 3px solid #004987;
+			}
+
+		nav .nav-information {
+			text-align: center;
+			margin: 2rem auto;
+			font-style: italic;
+			font-size: 150%;
+		}
+
 
 	/*	Meldinger
 	*/
@@ -130,8 +162,8 @@
 		display: block;
 		width: 100%;
 		text-align: center;
-		min-height: 30vh;
-		line-height: 30vh;
+		align-self: stretch;
+		height: auto;
 		box-sizing: border-box;
 		z-index: 4;
 	}
@@ -144,10 +176,10 @@
 
 	#historikk li {
 		display: block;
+		height: auto;
 		width: 100%;
 		text-align: center;
-		min-height: 20vh;
-		line-height: 20vh;
+		align-self: stretch;
 		box-sizing: border-box;
 
 	}
@@ -226,6 +258,13 @@
 		vertical-align: middle;
 	}
 
+}
+
+
+@media only screen and (orientation: portrait) {
+
+
+	
 }
 
 
