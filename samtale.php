@@ -25,12 +25,8 @@
 
 	
 		<header>
-				<a href="#" class="left-button-holder">Rensk</a>
-				<h1 class="title-holder"><?php echo $title; ?></h1>
-
-			<span class="right-button-holder">
-				
-			</span>
+				<a href="#">Rensk</a>
+				<h1><?php echo $title; ?></h1>
 		</header>
 	
 
