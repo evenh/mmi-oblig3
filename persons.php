@@ -1,5 +1,5 @@
 <?php
-$personer = array("Arne Johan Bitter", "Erik Tabulator", "Jostein Mengele", "Sigurd Snurpe");
+$personer = array("Martin Duppera", "Odd Roar Pavarotti", "Jostein Mengele", "Stan Bye Yourman");
 
 if(!empty($_POST)){
 	$data['available'] = $_POST['available'];
