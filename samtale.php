@@ -25,7 +25,7 @@
 
 	
 		<header>
-				<a href="#">Rensk</a>
+				<a href="index.php">Tilbake</a>
 				<h1><?php echo $title; ?></h1>
 		</header>
 	
