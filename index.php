@@ -21,12 +21,11 @@
 
 		<section>
 			<nav>
-				<a id="start" href="samtale.php">Start ny samtale</a>
+				<a id="start" href="samtale.php">Oversett lokalt</a>
+				<p class="nav-information">...Eller...</p>
+				<a id="share" class="alt" href="samtale.php?mode=share">Del oversettelse med andre</a>
 			</nav>
 		</section>
-		
-		<ul id="personList">
-		</ul>
 	</div>
 
 	<!-- Javascript -->
