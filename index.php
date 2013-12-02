@@ -32,11 +32,5 @@
 
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<script src="js/main.js"></script>
-	<script>
-	$("a").click(function (event) {
-		event.preventDefault();
-		window.location = $(this).attr("href");
-	});
-	</script>
 </body>
 </html>
