@@ -272,6 +272,13 @@
 		vertical-align: middle;
 	}
 
+	/* Annet
+	*/
+
+	.error {
+		color: #cc0000;
+	}
+
 }
 
 
