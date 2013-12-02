@@ -11,10 +11,11 @@
 
  	$("#application").append('<audio id="blip" nocontrols><source src="audio/blip.mp3" type="audio/mpeg" /><source src="audio/blip.ogg" type="audio/ogg" /></audio>');
 
- 	var audioHolder		= document.getElementById("blip");
- 	var messageHolder   = $("#message");
- 	var historikkHolder = $("#historikk");
- 	var firstLoad		= true;
+	var audioHolder             = document.getElementById("blip");
+	var messageHolder           = $("#message");
+	var historikkHolder         = $("#historikk");
+	var emptyConversationString = "Ingen meldinger enda";
+	var firstLoad               = true;
 	// Skru av caching
 	$.ajaxSetup({ cache: false });
 
@@ -35,8 +36,6 @@
 		$.get("data.json", function(data){
 			// Hvis det er ny tekst i arrayet kontra tekstfeltets verdi
 			if(cleanText(messageHolder.text()) != cleanText(data.messages[0])){
-				console.log("msgtext: "+cleanText(messageHolder.text()));
-				console.log("datamsg: "+cleanText(data.messages[0]));
 				// Oppdater tekstfeltets tekst
 				if(data.messages[0].charAt(0) === "@"){
 					var tmp = "";
@@ -98,6 +97,14 @@
 
 				firstLoad = false;
 
+			}
+		})
+		// Hvis tom json-fil eller andre feil
+		.fail(function(){
+			if(messageHolder.text() != emptyConversationString){
+				historikkHolder.html('');
+				messageHolder.text(emptyConversationString);
+				console.log("Ga brukeren beskjed om at det ikke er noen data enda...");
 			}
 		});
 }, 500);

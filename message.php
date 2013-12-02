@@ -1,7 +1,11 @@
 <?php
-$dataFile = json_decode(file_get_contents("data.json"), true);
+$slettet = false;
 
-if(!empty($_POST)){
+if(isset($_GET['slett'])){
+	file_put_contents("data.json", "");
+} elseif(!empty($_POST)){
+	$dataFile = json_decode(file_get_contents("data.json"), true);
+
 	// Hvis 0 oppføringer i arrayet
 	if(count($dataFile['messages']) == 0){
 		// Sett første oppføring til postet melding
@@ -39,6 +43,8 @@ $dataFile = json_decode(file_get_contents("data.json"));
 				echo "Ingen melding lagret enda…";
 			}
 		?></p>
+	<h2>Slett innhold</h2>
+	<p>Trykk <a href="message.php?slett">her</a> for å slette alt samtaleinnhold. Du får ikke spørsmål om bekreftelse, og det er ingen vei tilbake :)</p>
 	<h2>Oppdater melding</h2>
 	<form action="message.php" method="post">
 		<input type="text" id="melding" name="message" size="100">
