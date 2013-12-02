@@ -7,12 +7,6 @@
  	// Forhindrer lenkefeil ved webappmodus på iOS
  	$("a").click(function (e){ e.preventDefault(); window.location = $(this).attr("href"); });
 
- 	// Fuck the status bar
- 	var updateStatusBar = navigator.userAgent.match(/iphone|ipad|ipod/i) && parseInt(navigator.appVersion.match(/OS (\d)/)[1], 10) >= 7;
-	if(updateStatusBar){
-        document.body.style.webkitTransform = 'translate3d(0, 20px, 0)';
-    }
-
  	window.scrollTo(0,1);
 
  	$("#application").append('<audio id="blip" nocontrols><source src="audio/blip.mp3" type="audio/mpeg" /><source src="audio/blip.ogg" type="audio/ogg" /></audio>');
