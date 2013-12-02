@@ -1,0 +1,7 @@
++ Sørge for at velkomstteksten skalerer bra (trykk for å starte)
+	+ Trenger vi velkomstteksten?
+	+ Se denne: http://stackoverflow.com/questions/12539697/iphone-5-css-media-query?rq=1
++ Sørge for at det ikke kun står "Åpen samtale"
+	+ Legge til ikoner (bluetooth)?
++ Se på font-størrelse på den fysiske enhet (for smått?)
++ Header/logotekst guffes litt opp i font (for å ikke gå i ett med statusbaren)?
