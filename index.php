@@ -9,14 +9,14 @@
 	<link rel="stylesheet" type="text/css" href="css/mmi.css" />
 
 
-	<title>Applikasjonstittel 1.0</title>
+	<title>Signal</title>
 </head>
 <body>
 
 	<div id="application" class="container">
 
 		<header>
-			<h1>Applikasjonstittel</h1>
+			<h1>Signal</h1>
 		</header>
 
 		<section>
