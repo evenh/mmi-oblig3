@@ -51,6 +51,8 @@
 		color: #fff;
 		text-align: center;
 		display: block;
+		padding: 0;
+		margin: 0;
 	}
 
 
@@ -191,7 +193,7 @@
 	#historikk li {
 		display: block;
 		min-height: 20%;
-		padding: 1.5rem;
+		padding: 1rem;
 		width: 100%;
 		text-align: center;
 		box-sizing: border-box;
@@ -282,11 +284,15 @@
 }
 
 
-@media only screen and (orientation: portrait) {
-
-
+@media (-webkit-min-device-pixel-ratio: 2) {
 	
+	html {
+		font-size: 10px;
+	}
+
 }
+
+@media only screen and ()
 
 
 /*	Animasjoner
