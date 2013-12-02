@@ -280,11 +280,21 @@
 	*/
 
 	.error {
+		position: relative;
 		color: #cc0000 !important;
+		background-color: rgba(224, 0, 0, 0.1);
 	}
 
 	.error:before {
-		content: "feil: ";
+		position: absolute;
+		left: 1rem;
+		content: "Feil";
+		float: left;
+		color: #fff;
+		background-color: #cc0000;
+		padding: 2px 4px;
+		font-size: 1rem;
+		text-transform: uppercase;
 	}
 
 }
@@ -312,4 +322,15 @@
 @-webkit-keyframes new-message {
 	from 	{ background-color: rgba(155, 255, 135, 1); }
 	to 		{ background-color: rgba(155, 255, 135, 0); }
+}
+
+
+@keyframes error-message {
+	from	{ background-color: rgba(224, 0, 0, 0.5); }
+	to		{ background-color: rgba(224, 0, 0, 0.1); }
+}
+
+@-webkit-keyframes error-message {
+	from	{ background-color: rgba(224, 0, 0, 0.5); }
+	to		{ background-color: rgba(224, 0, 0, 0.1); }
 }
