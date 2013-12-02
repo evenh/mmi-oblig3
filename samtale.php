@@ -46,11 +46,5 @@
 
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/app.js"></script>
-	<script>
-	$("a").click(function (event) {
-		event.preventDefault();
-		window.location = $(this).attr("href");
-	});
-	</script>
 </body>
 </html>
