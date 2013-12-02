@@ -64,17 +64,34 @@
 				}
 
 				if (!firstLoad) { 
-					$(messageHolder).css({
-						"animation": "new-message 2s",
-						"-webkit-animation": "new-message 2s"
-					});
 
-					setTimeout(function() {
+					if ($(messageHolder).hasClass("error")) {
 						$(messageHolder).css({
-							"animation": "none",
-							"-webkit-animation": "none"
-						})
-					}, 2000);
+							"animation": "error-message 1.2s",
+							"-webkit-animation": "error-message 1.2s"
+						});
+
+						setTimeout(function() {
+							$(messageHolder).css({
+								"animation": "none",
+								"-webkit-animation": "none"
+							})
+						}, 2000);
+					}
+
+					else {
+						$(messageHolder).css({
+							"animation": "new-message 1.2s",
+							"-webkit-animation": "new-message 1.2s"
+						});
+
+						setTimeout(function() {
+							$(messageHolder).css({
+								"animation": "none",
+								"-webkit-animation": "none"
+							})
+						}, 2000);
+					}
 
 					audioHolder.play();
 				}
