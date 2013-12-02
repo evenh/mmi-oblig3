@@ -39,6 +39,20 @@
 		color: rgba(10, 10, 10, 0.8);
 	}
 
+	/*	Splash
+	*/
+
+	#splash {
+		width: 100vw;
+		height: 100vh;
+		line-height: 100vh;
+		z-index: 9999;
+		background-color: #222;
+		color: #fff;
+		text-align: center;
+		display: block;
+	}
+
 
 	/*	Applikasjonscontainer
 	*/
