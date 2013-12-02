@@ -7,7 +7,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic" />
 	<link rel="stylesheet" type="text/css" href="css/mmi.css" />
-
+	<link rel="apple-touch-icon" href="other/logo.png" />
 	<title>Signal</title>
 </head>
 <body>
