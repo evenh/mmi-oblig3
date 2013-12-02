@@ -85,7 +85,7 @@
 		flex: 0 0 auto;
 		width: 100%;
 		background-color: rgba(10, 10, 10, 0.8);
-		padding: 20px 0.5rem;
+		padding: 10px 0.5rem;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
@@ -95,9 +95,10 @@
 			display: inline-block;
 			color: #ffffff;
 			font-size: 1rem;
+			padding: 10px 0;
 			text-transform: uppercase;
 			text-align: center;
-			line-height: 10vh;
+			line-height: 40px;
 			margin: 0;
 			padding: 0;
 		}
@@ -111,7 +112,6 @@
 			display: inline-block;
 			max-height: 100%;
 			box-sizing: border-box;
-			margin-top: 1vh;
 			vertical-align: top;
 			text-decoration: none;
 			text-align: center;
