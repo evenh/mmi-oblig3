@@ -297,6 +297,11 @@
 		text-transform: uppercase;
 	}
 
+	.noMessages {
+		color: #999;
+		font-style: italic;
+	}
+
 }
 
 
