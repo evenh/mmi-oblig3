@@ -3,31 +3,62 @@
  * Til bruk i oblig3 i Menneske maskin interaksjon-faget, høsten 2013
  */
 
-$(document).ready(function(){
+ $(document).ready(function(){
 
-	window.scrollTo(0,1);
+ 	window.scrollTo(0,1);
 
-	$("#application").append('<audio id="blip" nocontrols><source src="audio/blip.mp3" type="audio/mpeg" /><source src="audio/blip.ogg" type="audio/ogg" /></audio>');
+ 	$("#application").append('<audio id="blip" nocontrols><source src="audio/blip.mp3" type="audio/mpeg" /><source src="audio/blip.ogg" type="audio/ogg" /></audio>');
 
-	var audioHolder		= document.getElementById("blip");
-	var messageHolder   = $("#message");
-	var historikkHolder = $("#historikk");
-	var firstLoad		= true;
+ 	var audioHolder		= document.getElementById("blip");
+ 	var messageHolder   = $("#message");
+ 	var historikkHolder = $("#historikk");
+ 	var firstLoad		= true;
 	// Skru av caching
 	$.ajaxSetup({ cache: false });
+
+	// Metode for å rense text for @ (feilmelding)
+	function cleanText(input){
+		var tmp = "";
+		var teller = (input.charAt(0) == "@" ? 1 : 0);
+		for(var i=teller;i<=input.length;i++){
+			tmp += input.charAt(i);
+		}
+
+		return tmp;
+	}
 
 	// Sjekk etter nye meldinger hvert halve sekund
 	window.setInterval(function(){
 		// Hent data.json med ajax
 		$.get("data.json", function(data){
 			// Hvis det er ny tekst i arrayet kontra tekstfeltets verdi
-			if(messageHolder.text() != data.messages[0]){
+			if(cleanText(messageHolder.text()) != cleanText(data.messages[0])){
+				console.log("msgtext: "+cleanText(messageHolder.text()));
+				console.log("datamsg: "+cleanText(data.messages[0]));
 				// Oppdater tekstfeltets tekst
-				messageHolder.text(data.messages[0]);
+				if(data.messages[0].charAt(0) === "@"){
+					var tmp = "";
+					for(var j=1;j<data.messages[0].length;j++){
+						tmp += data.messages[0].charAt(j);
+					}
+					messageHolder.text(tmp);
+					messageHolder.addClass('error');
+				} else {
+					messageHolder.text(data.messages[0]);
+					messageHolder.removeClass('error');
+				}
 				// Rens historikk, og loop gjennom resterende array
 				historikkHolder.html('');
 				for (var i=1;i<data.messages.length; i++){
-					historikkHolder.prepend('<li>'+data.messages[i]+'</li>');
+					if(data.messages[i].charAt(0) === "@"){
+						var tmp = "";
+						for(var j=1;j<data.messages[i].length;j++){
+							tmp += data.messages[i].charAt(j);
+						}
+						historikkHolder.prepend('<li class="error">'+$.trim(tmp)+'</li>');
+					} else {
+						historikkHolder.prepend('<li>'+data.messages[i]+'</li>');
+					}
 				}
 
 				if (!firstLoad) { 
@@ -50,5 +81,5 @@ $(document).ready(function(){
 
 			}
 		});
-	}, 500);
+}, 500);
 });
