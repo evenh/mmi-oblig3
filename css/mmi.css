@@ -280,7 +280,11 @@
 	*/
 
 	.error {
-		color: #cc0000;
+		color: #cc0000 !important;
+	}
+
+	.error:before {
+		content: "feil: ";
 	}
 
 }
