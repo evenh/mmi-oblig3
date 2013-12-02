@@ -6,6 +6,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic" />
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" href="css/mmi.css" />
 	<link rel="apple-touch-icon" href="other/logo.png" />
 	<title>Signal</title>
@@ -13,13 +14,15 @@
 <body>
 
 	<?php
-	if (isset($_GET["name"])) {
-		$title = "Samtale med " . $_GET["name"];
+
+	if (isset($_GET["mode"])) {
+		$title = '<i class="fa fa-signal"></i> Deler via Bluetooth';
 	}
 
 	else {
-		$title = "Åpen samtale";
+		$title = "Lokal oversettelse";
 	}
+
 	?>
 
 	<div id="application" class="container">
