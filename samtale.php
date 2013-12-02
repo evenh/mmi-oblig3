@@ -13,23 +13,23 @@
 <body>
 
 	<?php
-		if (isset($_GET["name"])) {
-			$title = "Samtale med " . $_GET["name"];
-		}
+	if (isset($_GET["name"])) {
+		$title = "Samtale med " . $_GET["name"];
+	}
 
-		else {
-			$title = "Åpen samtale";
-		}
+	else {
+		$title = "Åpen samtale";
+	}
 	?>
 
 	<div id="application" class="container">
 
-	
+		
 		<header>
-				<a href="index.php">Tilbake</a>
-				<h1><?php echo $title; ?></h1>
+			<a href="index.php">Tilbake</a>
+			<h1><?php echo $title; ?></h1>
 		</header>
-	
+		
 
 		<section>
 
@@ -42,10 +42,15 @@
 
 	</div>
 
-<!-- Javascript -->
+	<!-- Javascript -->
 
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/app.js"></script>
-
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+	$("a").click(function (event) {
+		event.preventDefault();
+		window.location = $(this).attr("href");
+	});
+	</script>
 </body>
 </html>
