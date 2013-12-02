@@ -36,6 +36,8 @@
 		$.get("data.json", function(data){
 			// Hvis det er ny tekst i arrayet kontra tekstfeltets verdi
 			if(cleanText(messageHolder.text()) != cleanText(data.messages[0])){
+				// Fjern noMessages-klassen + error
+				messageHolder.removeClass("noMessages error");
 				// Oppdater tekstfeltets tekst
 				if(data.messages[0].charAt(0) === "@"){
 					var tmp = "";
@@ -103,6 +105,7 @@
 		.fail(function(){
 			if(messageHolder.text() != emptyConversationString){
 				historikkHolder.html('');
+				messageHolder.addClass("noMessages").removeClass("error");
 				messageHolder.text(emptyConversationString);
 				console.log("Ga brukeren beskjed om at det ikke er noen data enda...");
 			}
