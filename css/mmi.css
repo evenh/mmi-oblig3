@@ -330,6 +330,19 @@
 }
 
 
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		min-height: 100%;
+		background: #eee url("../images/orientation@2x.png") no-repeat center center;
+	}
+
+}
+
+
 /*	Animasjoner
 */
 
