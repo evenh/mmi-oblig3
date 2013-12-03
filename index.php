@@ -11,7 +11,7 @@
 	<link rel="apple-touch-icon" href="other/logo.png" />
 	<title>Signal</title>
 </head>
-<body>
+<body class="front-page">
 
 	<div id="application" class="container">
 

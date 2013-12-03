@@ -39,6 +39,10 @@
 		color: rgba(10, 10, 10, 0.8);
 	}
 
+	body.front-page {
+		background: #fff url(../images/whitey.png) repeat top left;
+	}
+
 
 	/*	Applikasjonscontainer
 	*/
@@ -95,11 +99,11 @@
 			}
 
 		header a + h1 {
-			width: 80%;
+			width: 60%;
 		}
 
 		header a {
-			width: 10%;
+			width: 20%;
 			display: inline-block;
 			max-height: 100%;
 			box-sizing: border-box;
