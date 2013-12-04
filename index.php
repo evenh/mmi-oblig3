@@ -9,14 +9,14 @@
 
 	<link rel="stylesheet" type="text/css" href="css/mmi.css" />
 	<link rel="apple-touch-icon" href="other/logo.png" />
-	<title>Signal</title>
+	<title>Sign.al</title>
 </head>
 <body class="front-page">
 
 	<div id="application" class="container">
 
 		<header>
-			<h1 class="front-page-title">Signal</h1>
+			<h1 class="front-page-title">Sign.al</h1>
 		</header>
 
 		<section>
